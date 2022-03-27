@@ -21,7 +21,10 @@ app.use(express.static('public'))
 // Lectura y parseo del body
 app.use(express.json())
 
+// Redireccionar a los routes
 app.use('/api/auth', require('./routes/auth'))
+
+app.use('/api/events', require('./routes/events'))
 
 
 // Escuchar Peticiones 
